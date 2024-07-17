@@ -1,0 +1,15 @@
+name: Test
+
+on: # Change this to only when merged with master later when debugging is done
+  - pull_request
+  - push
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - run: echo "$PWD"
